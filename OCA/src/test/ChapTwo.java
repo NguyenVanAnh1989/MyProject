@@ -1,15 +1,18 @@
 package test;
 
 public class ChapTwo {
-	
+
 	DayTest enumTest;
 	
+	protected void finalize() {
+		System.out.println("call me");
+	}
+
 	// Some operator
 	public ChapTwo(DayTest enumTest) {
 		this.enumTest = enumTest;
 	}
-	
-	
+
 	public void declareSomeOperator() {
 		int addition = 0 + 0;
 		int subtraction = 0 - 0;
@@ -42,15 +45,29 @@ public class ChapTwo {
 		if (check) {
 
 		} else if (check) {
-			
+
 		} else {
-			
+
 		}
 	}
-	
+
+	public void optionLabelLoop() {
+		OUTSIDE_LABEL: for (int i = 0; i < 10; i++) {
+			INSIDE_LABEL: for (int j = 0; j < 10; j++) {
+				System.out.println(j * i);
+				if (j == 5) {
+					continue OUTSIDE_LABEL;
+				}
+				if (i == 8 && j == 8) {
+					continue INSIDE_LABEL;
+				}
+			}
+		}
+		System.out.println("Nguyen Van Anh");
+	}
+
 	public static enum DayTest {
 		DAYONE, DAYTWO, DAYTHREE, DAYFOUR, DAYFIVE, DAYSIX, DAYSEVEN
 	}
 
 }
-

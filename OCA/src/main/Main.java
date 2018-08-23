@@ -1,7 +1,17 @@
 package main;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import test.ChapOne;
 import test.ChapTwo;
+import test.MethodsDeclare;
 
 public class Main {
 
@@ -11,28 +21,17 @@ public class Main {
 //		chapOne = null;
 //		chapOne.declareAndInitializingVariable();
 		ChapTwo chapTwo = new ChapTwo(ChapTwo.DayTest.DAYFIVE);
-		chapTwo.declareSomeOperator();
+		chapTwo = new ChapTwo(ChapTwo.DayTest.DAYFOUR);
 //		System.out.println("" + "data will call");
-		int dayOfWeek = 5;
-		switch (dayOfWeek) {
-		default:
-			System.out.println("Weekday");
-		case 0:
-			System.out.println("Sunday");
-		case 6:
-			System.out.println("Saturday");
-		case 8:
-			System.out.println("Saturday 1");
-		case 9:
-			System.out.println("Saturday 2");
-		case 10:
-			System.out.println("Saturday 3");
-		case 11:
-			System.out.println("Saturday 4");
-		case 5:
-			System.out.println("Saturday 5");
-			
-		}
+		ArrayList<Object> list1 = new ArrayList<Object>();
+//		ArrayList list2 = new ArrayList(10);
+//		ArrayList list3 = new ArrayList(list2);
+//		LocalDate localDate = LocalDate.of(1970, 01, 40);
+//		LocalTime localtime = LocalTime.now();
+		Period period = Period.ofDays(1);
+//		LocalDateTime localDateTime = LocalDateTime.of(2018, Month.APRIL, 40);
+//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd'T'hh:mm:ss n");
+		MethodsDeclare.ChildMethodDeclare.getDefaultMethodTest();
 
 	}
 

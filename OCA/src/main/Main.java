@@ -31,7 +31,7 @@ public class Main {
 		Period period = Period.ofDays(1);
 //		LocalDateTime localDateTime = LocalDateTime.of(2018, Month.APRIL, 40);
 //		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd'T'hh:mm:ss n");
-		MethodsDeclare.ChildMethodDeclare.getDefaultMethodTest();
+		new MethodsDeclare();
 
 	}
 

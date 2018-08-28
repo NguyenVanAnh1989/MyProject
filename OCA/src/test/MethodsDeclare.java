@@ -1,10 +1,21 @@
 package test;
 
-public class MethodsDeclare {
+import static test.StaticMethod.getStaticMethods;
+import static test.StaticMethod.callMethodStatic;
 
+public class MethodsDeclare {
+	private static int one;
+	private static final int two;
+	private static final int three = 3;
+	private static final int four;
+	static {
+		two = 1;
+		four = 2;
+	}
 	
 	public MethodsDeclare() {
-		
+		getStaticMethods();
+		callMethodStatic();
 	}
 	//Access modified (not require)
 	 	   //Optional Specifiers (not require)
@@ -15,15 +26,15 @@ public class MethodsDeclare {
 		
 	}
 	
-	private void defaultMethod() {
+	void defaultMethod() {
 		System.out.println("Call success");
-	}
-	
-	public static class ChildMethodDeclare {
-		public static void getDefaultMethodTest() {
-			new MethodsDeclare().defaultMethod();
-		}
 		
 	}
 	
 }
+
+//class ChildMethodDeclare extends MethodsDeclare{
+//	public static void getDefaultMethodTest() {
+//		new MethodsDeclare().defaultMethod();
+//	}
+//}

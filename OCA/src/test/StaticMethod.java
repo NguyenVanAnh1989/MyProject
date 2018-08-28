@@ -1,6 +1,7 @@
 package test;
 
 public class StaticMethod {
+	
 	static void getStaticMethods() {
 		System.out.println("my name is static method");
 		StringBuilder strBuider = new StringBuilder("Nguyen Van");
@@ -11,6 +12,9 @@ public class StaticMethod {
 	static void callMethodStatic() {
 		passByPrimitive(10);
 		passByPrimitive(20L);
+		varArgs(new String[] {"2","3"});
+		varArgs("5","4","3","2","1");
+		varArgs(new Integer[] {1,2,3,4});
 	}
 	
 	static void getNewStaticMethods() {
@@ -29,8 +33,19 @@ public class StaticMethod {
 		System.out.println("Integer " + number);
 	}
 	
+	static void passByPrimitive(int number, int integer) {
+		System.out.println("Integer " + number);
+	}
+	
 	static void passByPrimitive(long number) {	
 		System.out.println("Long " + number);
 	}
+
+	static void varArgs (String... strings) {
+		System.out.println("call me " + strings[0]);
+	}
 	
+	static void varArgs (Integer[] integer) {
+		System.out.println("call me " + integer[0]);
+	}
 }
